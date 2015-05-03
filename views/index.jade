@@ -1,24 +1,6 @@
 extends layout
 
 block content
-  md-toolbar
-   div(class="md-toolbar-tools")
-    md-button(ng-click="toggleLeft()",class="md-icon-button",aria-label="Settings")
-     md-icon(md-svg-icon="images/menu.svg")
-    h2
-     span #{title}
-    span(flex)
-    md-button(class="md-icon-button",aria-label="Favorite")
-     md-icon(md-svg-icon="images/favorite.svg",style="color:greenyellow;")
-    md-button(class="md-icon-button",aria-label="More")
-     md-icon(md-svg-icon="images/more_vert.svg")
-  md-sidenav(class="md-sidenav-left md-whiteframe-z2",md-component-id="left")
-   md-toolbar
-    div(class="md-toolbar-tools")
-     md-button(ng-click="close()",class="md-icon-button",aria-label="Settings")
-      md-icon(md-svg-icon="images/menu.svg")
-     h1(class="md-toolbar-tools") Sidenav Left
-   md-content(layout-padding,ng-controller="LeftCtrl")
   div(class="content")
    md-grid-list(md-cols-sm="1",md-cols-md="2",md-cols-gt-md="6",md-row-height-gt-md="1:1",md-row-height="4:3",md-gutter="8px",md-gutter-gt-sm="4px")
     md-grid-tile(ng-repeat="tile in tiles",md-rowspan="{{tile.span.row}}",md-colspan="{{tile.span.col}}",md-colspan-sm="1",ng-class="tile.background")

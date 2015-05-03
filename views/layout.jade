@@ -5,9 +5,27 @@ html
     link(rel='stylesheet', href='/lib/angular-material/angular-material.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body(ng-app='starterApp',layout='column',ng-controller='appCtrl')
-    block content
-    script(src='/lib/angular/angular.js')
-    script(src='/lib/angular-aria/angular-aria.js')
-    script(src='/lib/angular-animate/angular-animate.js')
-    script(src='/lib/angular-material/angular-material.js')
-    script(src='/javascripts/controllers/starter.js')
+   md-toolbar
+    div(class="md-toolbar-tools")
+     md-button(ng-click="toggleLeft()",class="md-icon-button",aria-label="Settings")
+      md-icon(md-svg-icon="/images/menu.svg")
+     h2
+      span #{title}
+     span(flex)
+     md-button(class="md-icon-button",aria-label="Favorite")
+      md-icon(md-svg-icon="/images/favorite.svg",style="color:greenyellow;")
+     md-button(class="md-icon-button",aria-label="More")
+      md-icon(md-svg-icon="/images/more_vert.svg")
+   md-sidenav(class="md-sidenav-left md-whiteframe-z2",md-component-id="left")
+    md-toolbar
+     div(class="md-toolbar-tools")
+      md-button(ng-click="close()",class="md-icon-button",aria-label="Settings")
+       md-icon(md-svg-icon="/images/menu.svg")
+      h1(class="md-toolbar-tools") Sidenav Left
+     md-content(layout-padding,ng-controller="LeftCtrl")
+   block content
+   script(src='/lib/angular/angular.js')
+   script(src='/lib/angular-aria/angular-aria.js')
+   script(src='/lib/angular-animate/angular-animate.js')
+   script(src='/lib/angular-material/angular-material.js')
+   script(src='/javascripts/controllers/starter.js')
