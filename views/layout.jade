@@ -2,10 +2,12 @@ doctype html
 html
   head
     title= title
+    link(rel='stylesheet', href='/lib/angular-material/angular-material.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body
+  body(ng-app='starterApp',layout='column',ng-controller='appCtrl')
     block content
     script(src='/lib/angular/angular.js')
     script(src='/lib/angular-aria/angular-aria.js')
     script(src='/lib/angular-animate/angular-animate.js')
     script(src='/lib/angular-material/angular-material.js')
+    script(src='/javascripts/controllers/starter.js')
