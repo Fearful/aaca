@@ -5,6 +5,7 @@ html
     meta(name="viewport",content="width=device-width")
     link(rel='stylesheet', href='/lib/angular-material/angular-material.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='/lib/modernizr/modernizr.js')
   body(ng-app='starterApp',layout='column',layout-fill,ng-controller='appCtrl')
    md-toolbar(md-scroll-shrink)
     div(class="md-toolbar-tools")
@@ -25,6 +26,8 @@ html
       h1(class="md-toolbar-tools") Sidenav Left
      md-content(layout-padding,ng-controller="LeftCtrl")
    block content
+   script(src='/lib/jquery/dist/jquery.js')
+   script(src='/javascripts/jquery/main.js')
    script(src='/lib/angular/angular.js')
    script(src='/lib/angular-aria/angular-aria.js')
    script(src='/lib/angular-animate/angular-animate.js')

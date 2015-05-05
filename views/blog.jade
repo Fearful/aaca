@@ -2,7 +2,7 @@ extends layout
 
 block content
   div(class="content")
-   md-grid-list(md-cols-sm="1",md-cols-md="2",md-cols-gt-md="6",md-row-height-gt-md="1:1",md-row-height="4:3",md-gutter="8px",md-gutter-gt-sm="4px")
+   md-grid-list(md-cols-sm="2",md-cols-md="3",md-cols-gt-md="6",md-row-height-gt-md="1:1",md-row-height="4:3",md-gutter="10px",md-gutter-gt-sm="5px")
     md-grid-tile(ng-repeat="tile in tiles",md-rowspan="{{tile.span.row}}",md-colspan="{{tile.span.col}}",md-colspan-sm="1",ng-class="tile.background")
      md-icon(md-svg-icon="{{tile.icon}}")
      md-grid-tile-footer

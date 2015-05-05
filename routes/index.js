@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: '(AACA) Asociacion de Agricultores Cannabicos Argentinos' });
+  res.render('index', { title: '(AACA) Agrupacion de Agricultores Cannabicos Argentinos' });
 });
 
 module.exports = router;
